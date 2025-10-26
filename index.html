@@ -1,0 +1,97 @@
+
+`html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ricerca Giochi su myrient.erista.me + Web</title>
+  <meta charset="UTF-8">
+  <script async src="https://cse.google.com/cse.js?cx=55898a959b5704d10"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 8px;
+      border: none;
+    }
+    input {
+      background-color: #2e2e2e;
+      color: #ffffff;
+    }
+    button {
+      background-color: #3a3a3a;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555555;
+    }
+    .gcse-search {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎮 Ricerca Giochi su myrient.erista.me + Web</h2>
+
+  <input type="text" id="console" placeholder="Tipo di console (es. PSP, NES)">
+  <input type="text" id="titolo" placeholder="Titolo del gioco (es. Zelda)">
+  <br>
+  <button onclick="cerca()">🔍 Cerca su myrient.erista.me</button>
+  <button onclick="soloConsole()">📂 Tutti i giochi per console</button>
+  <button onclick="cercaDownload()">💾 Download diretto</button>
+
+  <h3>🌐 Cerca anche da tutto il web</h3>
+  <p>Scrivi qui sotto per cercare ovunque online (risultati visibili qui sotto):</p>
+  <div class="gcse-search"></div>
+
+  <script>
+    function cerca() {
+      var console = document.getElementById("console").value.trim();
+      var titolo = document.getElementById("titolo").value.trim();
+      if (!console && !titolo) {
+        alert("Inserisci almeno una console o un titolo.");
+        return;
+      }
+      var query = "site:myrient.erista.me " + console + " " + titolo;
+      var url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      window.open(url, "_blank");
+    }
+
+    function soloConsole() {
+      var console = document.getElementById("console").value.trim();
+      if (!console) {
+        alert("Inserisci una console.");
+        return;
+      }
+      var query = "site:myrient.erista.me " + console;
+      var url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      window.open(url, "_blank");
+    }
+
+    function cercaDownload() {
+      var console = document.getElementById("console").value.trim();
+      var titolo = document.getElementById("titolo").value.trim();
+      if (!console && !titolo) {
+        alert("Inserisci almeno una console o un titolo.");
+        return;
+      }
+      var query = "site:myrient.erista.me " + console + " " + titolo + " download iso rom link";
+      var url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
+`
+
+---
