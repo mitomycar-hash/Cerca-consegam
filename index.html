@@ -1,27 +1,29 @@
-
+---
 `html
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-  <title>Ricerca Giochi su myrient.erista.me + Web</title>
   <meta charset="UTF-8">
+  <title>Ricerca Giochi su myrient.erista.me + Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script async src="https://cse.google.com/cse.js?cx=55898a959b5704d10"></script>
   <style>
     body {
       font-family: sans-serif;
-      text-align: center;
-      padding: 40px;
       background-color: #1e1e1e;
       color: #ffffff;
+      text-align: center;
+      padding: 30px;
     }
     input, button {
       font-size: 18px;
       padding: 10px;
-      margin: 10px;
-      width: 80%;
+      margin: 10px auto;
+      width: 90%;
       max-width: 400px;
       border-radius: 8px;
       border: none;
+      display: block;
     }
     input {
       background-color: #2e2e2e;
@@ -35,6 +37,9 @@
     button:hover {
       background-color: #555555;
     }
+    h2, h3 {
+      margin-top: 30px;
+    }
     .gcse-search {
       margin-top: 40px;
     }
@@ -45,7 +50,7 @@
 
   <input type="text" id="console" placeholder="Tipo di console (es. PSP, NES)">
   <input type="text" id="titolo" placeholder="Titolo del gioco (es. Zelda)">
-  <br>
+
   <button onclick="cerca()">🔍 Cerca su myrient.erista.me</button>
   <button onclick="soloConsole()">📂 Tutti i giochi per console</button>
   <button onclick="cercaDownload()">💾 Download diretto</button>
